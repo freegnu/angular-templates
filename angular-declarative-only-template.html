@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>angular-query-demo</title>
+<link rel="stylesheet" href="css/bootstrap-3.0.0.min.css" type="text/css" />
+</head>
+<body ng-controller="myController">
+<div class="container row span12">
+<pre ng-bind="'items_order = ' + items_order + ', items_filter = ' + items_filter + ', descending = ' + descending + ', ' + !descending"></pre>
+<input class="filter span2" type="text" name="filter" placeholder="filter displayed" ng-model="items_filter" />
+<select class="sort span1" ng-model="items_order">
+ <option ng-repeat="field in items.result.fields">{{field}}</option>
+</select>
+<table class="span6 items">
+<thead class="header">
+<tr>
+<th class="span2" ng-repeat="field in items.result.fields"><div class="btn btn-primary" ng-click="changeOrder($event,field)" ng-bind-html-unsafe="field + getOrder(field)"></div></th>
+</tr>
+</thead>
+<tr class="item" ng-repeat="item in items.result.values | filter:items_filter | orderBy:items_order:descending">
+<td class="span2" ng-repeat="field2 in items.result.fields" ng-bind="item[field2]"></td>
+</tr>
+</table>
+</div>
+<script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/angular-1.0.8.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+angular.element(document).ready(function() {
+ angular.module('myApp', []);
+ angular.bootstrap(document, ['myApp']);
+});
+//-->
+</script>
+<script src="js/app.js" type="text/javascript"></script>
+</body>
+</html>

@@ -6,6 +6,8 @@ A Sortable filterable dynamic grid using only declarative syntax.
 
 Next steps:
 
+*   Add dynamic field specific filters.
+
 *   Change source to ajax.
 
 *   Allow for more results data structures (no fields and/or property names).

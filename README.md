@@ -6,6 +6,8 @@ A Sortable filterable dynamic table grid using only declarative syntax.
 
 Example that uses only standard built-in AngularJS directives and filters (no custom directives and filters).:
 
+### [click for demo] [demo] ###
+
 #### HTML [angular-declarative-only-template.html] [adot]: ####
 
     <!DOCTYPE HTML>
@@ -107,3 +109,4 @@ Next steps:
 
 [adot]:angular-declarative-only-template.html "Sortable and filterable dynamic grid using only declarative syntax"
 [adotjs]:js/app.js "Support functions executed in scope and init of data sources and state variables in scope"
+[demo]:http://dplenterprises.com/angular-templates/angular-declarative-only-template.html "live demo"
